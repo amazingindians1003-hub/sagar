@@ -1,0 +1,128 @@
+/* Additional AAS content: QR donations, gallery additions and eligibility */
+.photo-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.photo-grid .photo-card-large {
+  grid-row: span 2;
+}
+
+.donation-qr-strip {
+  align-items: center;
+  background: #f0e7d9;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 280px;
+  margin-top: 28px;
+  padding: 38px 48px;
+}
+
+.donation-qr-strip h3 {
+  font: 600 30px/1.05 var(--serif);
+  letter-spacing: -.045em;
+  margin: 0 0 13px;
+}
+
+.donation-qr-strip p:not(.panel-kicker) {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+
+.donation-qr-strip figure {
+  background: #fff;
+  box-shadow: 12px 12px 0 var(--coral);
+  margin: 0;
+  padding: 13px;
+}
+
+.donation-qr-strip img {
+  display: block;
+  height: 255px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.donation-qr-strip figcaption {
+  font: 500 9px/1.5 var(--mono);
+  letter-spacing: .08em;
+  padding: 11px 3px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.eligibility-section {
+  background: var(--paper);
+  padding: 106px max(24px, calc((100vw - 1160px)/2));
+}
+
+.eligibility-section > div:first-child {
+  max-width: 770px;
+}
+
+.eligibility-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 27px 0 47px;
+  max-width: 600px;
+}
+
+.eligibility-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.eligibility-grid article {
+  background: var(--cream);
+  min-height: 238px;
+  padding: 25px;
+}
+
+.eligibility-grid article > span {
+  align-items: center;
+  background: var(--ink);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font: 600 14px/1 var(--mono);
+  height: 55px;
+  justify-content: center;
+  letter-spacing: -.04em;
+  width: 55px;
+}
+
+.eligibility-grid h3 {
+  font: 600 25px/1.04 var(--serif);
+  letter-spacing: -.045em;
+  margin: 31px 0 10px;
+}
+
+.eligibility-grid p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.eligibility-cta {
+  margin-top: 28px;
+}
+
+@media (max-width: 900px) {
+  .donation-qr-strip { grid-template-columns: 1fr 230px; padding: 32px; }
+  .donation-qr-strip img { height: 205px; }
+  .eligibility-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-grid .photo-card-large { grid-row: auto; }
+  .donation-qr-strip { display: block; padding: 28px 24px; }
+  .donation-qr-strip figure { margin: 29px auto 0; max-width: 285px; }
+  .donation-qr-strip img { height: auto; }
+  .eligibility-section { padding-bottom: 72px; padding-top: 72px; }
+  .eligibility-intro { font-size: 16px; }
+  .eligibility-grid { grid-template-columns: 1fr; }
+  .eligibility-grid article { min-height: 0; }
+}
